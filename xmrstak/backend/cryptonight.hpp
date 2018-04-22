@@ -11,7 +11,7 @@ enum xmrstak_algo
 	cryptonight_monero = 3,
 	cryptonight_heavy = 4,
 	cryptonight_aeon = 5,
-	cryptonight_ARTO = 6
+	cryptonight_arto = 6
 };
 
 // define aeon settings
@@ -50,7 +50,7 @@ template<>
 inline constexpr size_t cn_select_memory<cryptonight_aeon>() { return CRYPTONIGHT_LITE_MEMORY; }
 
 template<>
-inline constexpr size_t cn_select_memory<cryptonight_ARTO>() { return CRYPTONIGHT_ARTO_MEMORY; }
+inline constexpr size_t cn_select_memory<cryptonight_arto>() { return CRYPTONIGHT_ARTO_MEMORY; }
 
 
 inline size_t cn_select_memory(xmrstak_algo algo)
@@ -65,7 +65,7 @@ inline size_t cn_select_memory(xmrstak_algo algo)
 		return CRYPTONIGHT_LITE_MEMORY;
 	case cryptonight_heavy:
 		return CRYPTONIGHT_HEAVY_MEMORY;
-	case cryptonight_ARTO:
+	case cryptonight_arto:
 		return CRYPTONIGHT_ARTO_MEMORY;
 	default:
 		return 0;
@@ -91,7 +91,7 @@ template<>
 inline constexpr uint32_t cn_select_mask<cryptonight_aeon>() { return CRYPTONIGHT_LITE_MASK; }
 
 template<>
-inline constexpr uint32_t cn_select_mask<cryptonight_ARTO>() { return CRYPTONIGHT_ARTO_MASK; }
+inline constexpr uint32_t cn_select_mask<cryptonight_arto>() { return CRYPTONIGHT_ARTO_MASK; }
 
 
 inline size_t cn_select_mask(xmrstak_algo algo)
@@ -106,7 +106,7 @@ inline size_t cn_select_mask(xmrstak_algo algo)
 		return CRYPTONIGHT_LITE_MASK;
 	case cryptonight_heavy:
 		return CRYPTONIGHT_HEAVY_MASK;
-	case cryptonight_ARTO:
+	case cryptonight_arto:
 		return CRYPTONIGHT_ARTO_MASK;
 	default:
 		return 0;
@@ -132,7 +132,7 @@ template<>
 inline constexpr uint32_t cn_select_iter<cryptonight_aeon>() { return CRYPTONIGHT_LITE_ITER; }
 
 template<>
-inline constexpr uint32_t cn_select_iter<cryptonight_ARTO>() { return CRYPTONIGHT_ARTO_ITER; }
+inline constexpr uint32_t cn_select_iter<cryptonight_arto>() { return CRYPTONIGHT_ARTO_ITER; }
 
 
 inline size_t cn_select_iter(xmrstak_algo algo)
@@ -147,7 +147,7 @@ inline size_t cn_select_iter(xmrstak_algo algo)
 		return CRYPTONIGHT_LITE_ITER;
 	case cryptonight_heavy:
 		return CRYPTONIGHT_HEAVY_ITER;
-	case cryptonight_ARTO:
+	case cryptonight_arto:
 		return CRYPTONIGHT_ARTO_ITER;
 	default:
 		return 0;
