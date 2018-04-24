@@ -502,6 +502,6 @@ void cryptonight_core_cpu_hash(nvid_ctx* ctx, xmrstak_algo miner_algo, uint32_t 
 	}
 	else if (miner_algo == cryptonight_arto)
 	{
-		cryptonight_core_gpu_hash<CRYPTONIGHT_arto_ITER, CRYPTONIGHT_arto_MASK, CRYPTONIGHT_arto_MEMORY/4, cryptonight_arto>(ctx, startNonce);
+		cryptonight_core_gpu_hash<CRYPTONIGHT_ARTO_ITER, CRYPTONIGHT_ARTO_MASK, CRYPTONIGHT_ARTO_MEMORY/4, cryptonight_arto>(ctx, startNonce);
 	}
 }
